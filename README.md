@@ -1,11 +1,11 @@
 
 
-## 🧩 Project Title
+## Project Title
 
 **Middleware-Enabled Microservices: Chatting, Trading, and Contact Tracing Systems**
 
 
-## 📋 Overview
+## Overview
 
 This project consists of three **independent yet middleware-integrated microservices**: a **Chatting System**, a **Stock Trading Simulation**, and a **Contact Tracing Application**. All systems were built using **Python**, **RabbitMQ** (as the message broker), and **Docker** for containerization.
 
@@ -13,32 +13,30 @@ Each application was designed to demonstrate real-time data exchange and asynchr
 
 ---
 
-## 🧰 Technologies Used
+## Technologies Used
 
-* 🐍 Python 3
-* 📨 RabbitMQ
-* 🐳 Docker
-* 🖼️ Tkinter (for GUI)
-* 🧵 Python Threading
+*  Python 3
+*  RabbitMQ
+* Docker
+* Tkinter (for GUI)
+* Python Threading
 * CLI + GUI interaction
 * Message Queues & Topics
 
 ---
 
-## 🟢 Chatting Microservice
-
-### 📌 Purpose:
+## Chatting Microservice
 
 Simulate a real-time group chat using RabbitMQ fanout exchange.
 
-### 💡 Features:
+### Features:
 
 * Each user acts as both **producer and consumer**
 * Messages broadcast to all clients using **fanout exchange**
 * GUI built with **Tkinter**
 * Background consumer thread ensures **responsive GUI**
 
-### 📦 Message Flow:
+### Message Flow:
 
 ```
 User Input (GUI) → Producer → RabbitMQ (fanout) → All Consumers → Chat GUI
@@ -46,33 +44,29 @@ User Input (GUI) → Producer → RabbitMQ (fanout) → All Consumers → Chat G
 
 ---
 
-## 🟠 Trading Microservice
-
-### 📌 Purpose:
+##  Trading Microservic
 
 Simulate a basic **stock exchange system** that handles order submission, trade matching, and price updates.
 
-### 💡 Features:
+### Features:
 
 * Producers submit **buy/sell orders**
 * Consumer matches trades and **publishes results**
 * GUI displays **latest executed price** for "XYZ Corp"
 * Two RabbitMQ topics used: `orders` and `trades`
 
-### 🧠 Logic:
+### Logic:
 
 * Match buy/sell orders based on price
 * Confirm execution and publish to GUI
 
 ---
 
-## 🔵 Contact Tracing Microservice
-
-### 📌 Purpose:
+##  Contact Tracing Microservice
 
 Simulate a **COVID-style contact tracing** app on a 2D grid.
 
-### 💡 Features:
+### Features:
 
 * Simulated persons move like a **chess king** on a board
 * Each person's location published via RabbitMQ
@@ -80,7 +74,7 @@ Simulate a **COVID-style contact tracing** app on a 2D grid.
 * GUI displays position grid and supports **user queries** by ID
 * Scalable to **1000x1000 grid**
 
-### 🧱 Components:
+### Components:
 
 * `person.py`: Simulates movement
 * `tracker.py`: Logs positions and detects contacts
@@ -88,7 +82,7 @@ Simulate a **COVID-style contact tracing** app on a 2D grid.
 
 ---
 
-## 🧪 Testing
+##  Testing
 
 | Component       | Test Type                        |
 | --------------- | -------------------------------- |
@@ -98,7 +92,7 @@ Simulate a **COVID-style contact tracing** app on a 2D grid.
 
 ---
 
-## 🧠 Key Learning Outcomes
+##  Key Learning Outcomes
 
 * Designed distributed microservices with real-time messaging
 * Integrated RabbitMQ into multi-process systems
